@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.example.ytplayer" version="0.0.1">
+	<name>ytplayer</name>
+	<category></category>
+	<description>https://0.s3.envato.com/files/129872589/index.html</description>
+	<author email="xxkuo@transtep.com" href="http://www.transtep.com">Transtep RD Team</author>
+	<serviceurl href="assets://index.html" />
+	<preference name="alwaysontop" value="true"/>
+	<preference name="position" value="0,0,1080,615"/>
+	<preference name="bgcolor" value="white"/>
+	<preference name="fullscreen" value="false"/>
+	<preference name="opacity" value="1"/>
+	<preference name="z-index" value="1"/>
+	<preference name="display" value="true"/>
+	<preference name="movable" value="true"/>
+	<preference name="disable" value="false"/>
+	<preference name="yt_ytAppId" value="AIzaSyBSNYowyIK429tUBU_PxCdAeNKTehLC9ZA"/>
+	<preference name="yt_defaultVolume" value="0.2"/>
+	<preference name="display_controls" value="false"/>
+	<preference name="display_fullscreen" value="false"/>
+	<preference name="display_volume" value="false"/>
+	<preference name="display_playlist" value="false"/>
+	<preference name="display_playlistControls" value="false"/>
+	<preference name="set_listid" value="PL0WSSNQ6FtMG8K8h2JlUZIJdEdkG_CoqD"/>
+</plugin>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>HTML5 Video & Youtube Background by Tean</title>
+	<link rel="stylesheet" type="text/css" href="css/playlistRight_buttons.css" />
+	<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.apvb.min.js"></script>
+	<script type="text/javascript" src="js/view.js"></script>
+</head>
+<body>
+	<div id="componentWrapper">
+		<div class="mediaWrapper">
+			<!-- local video holder -->
+			<div class="mediaHolder"></div>
+			<!-- preview image holder -->
+			<div class="previewHolder"></div>
+			<!-- youtube holder -->
+			<div class="youtubeHolder"></div>
+			<!-- big play button for media -->
+			<div class="big_play"><img src='data/icons/big_play.png' alt=''/></div>
+			<div class="controls_vol_fs">
+				<div class="controls_fullscreen"></div>
+				<div class="controls_volume">
+					<div class="volume_toggle"></div>
+					<div class="volume_seekbar">
+						<div class="volume_bg"></div>
+						<div class="volume_level"></div>
+					</div>
+				</div>
+			</div>
+			<!-- controls -->
+			<div class="controls">
+				<div class="controls_prev"></div>
+				<div class="controls_toggle"></div>
+				<div class="controls_next"></div>
+			</div>
+			 <!-- seekbar -->
+			<div class="seekbar">
+				<div class="seekbar_hit"></div>
+				<div class="load_progress"></div>
+				<div class="play_progress"></div>
+			</div>
+		</div>
+
+		<!-- holder for thumbnails (delete this whole div completely to hide the playlist!) -->
+		<div class="thumbHolder">
+			<div class="playlistControls">
+				<!-- open/close playlist -->
+				<div class="playlist_toggle"></div>
+				<!-- switch thumb layout -->
+				<div class="playlist_switch"></div>
+			</div>	
+			<div class="thumbContainer">
+				<div class="thumbInnerContainer"><!-- thumbnails get appended here --></div>
+			</div>	
+			<!-- thumb scroll buttons -->
+			<div class="thumbBackward"></div>	
+			<div class="thumbForward"></div>	
+		</div>
+
+		<!-- media preloader -->
+		<div class="mediaPreloader"></div>
+	</div>
+	<div class="componentPlaylist">
+		<ul id='playlist' data-address="playlist">
+			<li data-address="youtube_playlist" class= "playlistItem" data-type='youtube_playlist' data-path="PLNwYFdZN2nMFH_v4rW3ZGs1w7f62pnjMm" data-aspectRatio="2" data-width="640" data-height="360"></li> 
+		</ul>
+	</div>
+</body>
+</html>
