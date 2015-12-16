@@ -42,5 +42,6 @@ Powered by JQuery & [HTML5 Video & Youtube Background by Tean](https://0.s3.enva
 |display_playlist                         |boolean|true      |是否顯示播放清單|
 |display_playlistControls           |boolean|true      |是否顯示播放清單控制器|
 |display_switch                           |boolean|true      |是否顯示播放清單轉換鈕|
+|display_cover                            |boolean|false     |是否使影片範圍不回應點擊事件|
 |set_listid                                    |string    |             |YouTube 播放清單 ID|
 |set_global_css                           |string    |             |設置 css|

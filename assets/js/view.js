@@ -25,6 +25,9 @@ $(function() {
 		if(!display.switch) {
 			$('.playlist_switch').remove();
 		}
+		if(!display.cover) {
+			$('.cover').remove();
+		}
 
 		var set = self.opt[2];
 		$('<style type="text/css">').html( set.global_css ).appendTo('head');

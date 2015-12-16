@@ -5,7 +5,7 @@
 		var options = [];
 		var list = {
 			yt: ['mediaId', 'defaultVolume', 'autoPlay', 'randomPlay', 'loopingOn', 'defaultGallerySide', 'scrollType', 'autoOpenPlaylist', 'closePlaylistOnVideoSelect', 'onPlaylistEndGoToUrl', 'onPlaylistEndUrl', 'onPlaylistEndTarget', 'useCookieDetection', 'useKeyboardNavigation', 'ytAppId', 'useDeeplink', 'startUrl', 'activePlaylist'],
-			display: ['controls', 'fullscreen', 'volume', 'seekbar', 'playlist', 'playlistControls', 'switch'],
+			display: ['controls', 'fullscreen', 'volume', 'seekbar', 'playlist', 'playlistControls', 'switch', 'cover'],
 			set: ['listid', 'global_css']
 
 		};
@@ -90,12 +90,13 @@
 			seekbar: true,
 			playlist: true,
 				playlistControls: true,
-				switch: true
+				switch: true,
+			cover: false
 		}, options[1] );
 
 		options[2] = $.extend(true,{
 			listid: 'PL0WSSNQ6FtMG8K8h2JlUZIJdEdkG_CoqD',
-			global_css: '#componentWrapper .thumbHolder_v{width: 100px;background-color: #fff} #componentWrapper .thumbContainer_v {left: 0px}',
+			global_css: '#componentWrapper .thumbHolder_v{} #componentWrapper .thumbContainer_v {}',
 		}, options[2] );
 
 

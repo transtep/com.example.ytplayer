@@ -21,5 +21,6 @@
 	<preference name="display_volume" value="false"/>
 	<preference name="display_playlist" value="false"/>
 	<preference name="display_playlistControls" value="false"/>
+	<preference name="display_cover" value="true"/>
 	<preference name="set_listid" value="PL0WSSNQ6FtMG8K8h2JlUZIJdEdkG_CoqD"/>
 </plugin>
