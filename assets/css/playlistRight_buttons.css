@@ -455,7 +455,7 @@ fullscreen btn is removed and volume jumps on its place */
 	left:0px;
 	top:0px;
 	width:0px;
-	height:10px;
+	height: 2px;
 	background:#ccc;
 }
 
@@ -464,7 +464,7 @@ fullscreen btn is removed and volume jumps on its place */
 	left:0px;
 	top:0px;
 	width:0px;
-	height:10px;
+	height:2px;
 	background:#999;
 }
 
