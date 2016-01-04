@@ -10,6 +10,8 @@ Powered by JQuery & [HTML5 Video & Youtube Background by Tean](https://0.s3.enva
 
 2. 將欲播放的 Youtube 清單填入 set_listid 參數。
 
+3. Chrome 需裝上 [cast 擴展](https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd/reviews?hl=en)才不會顯示錯誤
+
 -
 
 #### Preference 擴充 （config.xml）

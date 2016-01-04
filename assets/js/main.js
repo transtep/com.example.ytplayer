@@ -12,24 +12,28 @@
 		for(var k1 in list) {
 			var opt = {};
 			if('getPreference' in self) {
-				for(var k2 in list[k1]) { 
-					var i = self.getPreference(k1+'_'+list[k1][k2]);
-					if(typeof i!='undefined') {
-						switch (i) {
+				for(var k2 in list[k1]) {
+					var name = list[k1][k2],
+						val = self.getPreference(k1+'_'+name);
+					if(typeof val!='undefined') {
+						switch (val) {
 							case "false" :
-								opt[list[k1][k2]] = !1;
+								opt[name] = !1;
 							break;
-							case 'true' :
-								opt[list[k1][k2]] = !0;
+							case "true" :
+								opt[name] = !0;
 							break;
-							case String(Number(i)) :
-								opt[list[k1][k2]] = Number(i);
+							case String(Number(val)) :
+								opt[name] = Number(val);
 							break;
 							default:
-								if(i.slice(0, 1)=='{' && i.slice(-1)=='}') {		//為了讓json可以使用
-									opt[list[k1][k2]] = i.replace(/\'/g, '"');
+								var s1 = val.charAt(0)
+								,	s2 = val.charAt(val.length - 1);
+								if( (s1=='{' && s2=='}') || (s1=='[' && s2==']') ) {		//為了讓json可以使用
+									var parse = JSON.parse(val.replace(/\'/g, '"'));
+									opt[name] = typeof parse=='object' ? parse : val;
 								} else {
-									opt[list[k1][k2]] = i;
+									opt[name] = val;
 								}
 						}
 					}
@@ -77,7 +81,7 @@
 			useDeeplink: false,
 			/* startUrl: deeplink start url, enter 'ul' data-address/'li' data-address (two levels). Or just 'ul' data-address (single level). */
 			startUrl: 'playlist3/youtube_playlist1',
-			
+
 			/* NO DEEPLINKING SETTINGS */
 			/*activePlaylist: enter element 'id' attributte */
 			activePlaylist: 'playlist'
@@ -110,6 +114,7 @@
 	};
 
 	YT.prototype = {	//負責跑馬燈相關處理
+		constructor: YT,
 		build: function() {
 			if(this.el)  document.body.removeChild(this.el);
 
@@ -127,7 +132,7 @@
 			};
 		}
 	}
-	
+
 var ctrl = new YT();
 $(function() {
 	ctrl.build();
