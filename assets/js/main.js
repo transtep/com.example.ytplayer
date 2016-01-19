@@ -15,27 +15,15 @@
 				for(var k2 in list[k1]) {
 					var name = list[k1][k2],
 						val = self.getPreference(k1+'_'+name);
-					if(typeof val!='undefined') {
-						switch (val) {
-							case "false" :
-								opt[name] = !1;
-							break;
-							case "true" :
-								opt[name] = !0;
-							break;
-							case String(Number(val)) :
-								opt[name] = Number(val);
-							break;
-							default:
-								var s1 = val.charAt(0)
-								,	s2 = val.charAt(val.length - 1);
-								if( (s1=='{' && s2=='}') || (s1=='[' && s2==']') ) {		//為了讓json可以使用
-									var parse = JSON.parse(val.replace(/\'/g, '"'));
-									opt[name] = typeof parse=='object' ? parse : val;
-								} else {
-									opt[name] = val;
-								}
-						}
+					if ( typeof val === "string" ) {
+						try {
+							opt[name] =
+								val === 'false' ? !1 :
+								val === 'true' ? !0 :
+								+val+'' === val ? +val :
+								/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/.test(val) ? JSON.parse(val.replace(/\'/g, '"')) :
+								val;
+						} catch( e ) {}
 					}
 				}
 			}
